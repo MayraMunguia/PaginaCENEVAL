@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ES" dir="ltr">
+<head>
+<title>CENEVAL UNISON</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles/layout.css" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="jquery-3.2.1.min.js"></script>
+<style>
+.mySlides {display:none;}
+.button {
+    background-color: #FF9900; /* Green */
+    border: none;
+    color: white;
+    padding: 20px 36px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #FF9900;
+}
+
+.button1:hover {
+    background-color: #FF9900;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <center>
+      <a href="http://www.uson.mx/"><img align="left" style="display: inline-block;height: 100px;width: 200" src="images/demo/unison.gif"></a>
+      <a href="http://www.dise.uson.mx/index.html"><img align="left" style="display: inline-block;height: 100px;width: 200" src="images/demo/dise.gif"></a>
+      <a href="http://www.ceneval.edu.mx/"><img align="left" style="display: inline-block;height: 100px;width: 200" src="images/demo/ceneval.gif"></a>
+      <br>
+      <section id="shout">
+        <a href="index.html"> <h1>Ceneval UNISON</h1></a>
+      </section>
+     
+    </center>
+  </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+  <div id="container" class="clear">
+
+    <section id="shout">
+      <h1 style="display: inline-block;">Formas de Pago</h1>
+    </section>
+    <div>
+  <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-light-grey " style="width:25%">Inicio</a>
+  <a href="docs.html" class="w3-bar-item w3-button w3-mobile w3-light-grey" style="width:25%">Documentación Requerida</a>
+  <a href="Registro.html" class="w3-bar-item w3-button w3-mobile w3-light-grey" style="width:25%">Registrate</a>
+  <a href="http://registroenlinea.ceneval.edu.mx/portal/calificaciones/resultadoSustentante.php" class="w3-bar-item w3-button w3-mobile w3-light-grey" style="width:23%">Consulta resultados</a>
+</div>
+    <br>
+    <br>
+    <P>Selecciona la información que requieres: </P>
+    <button id="bUnison" class="button button1">Alumnos UNISON</button>
+    <button id="bExterno" class="button button1">Alumnos de instituciones EXTERNAS</button>
+    <div id="content" style="width: 100%">
+          <div class="w3-panel w3-border-top w3-border-orange">
+         <div style="display: none" id="unison">
+           <h2>Pago Bancario para el examen:</h2>
+         <p>En la siguiente tabla se encuentran los precios del examen desglosados por carrera.</p>
+         <p>Favor de cumplir con el pago en tiempo y forma.</p>
+
+         <img src="images/demo/pagointernos.jpg" align="center">
+
+         </div>
+      </div>
+      <div style="display: none" id="externos">
+         <br>
+          <h2>Pago en biblioteca para estudiantes Externos:</h2>
+
+          <p>Alumnos externos a la UNISON deben realizar un pago a biblioteca central de:</p>
+          <strong style="font-size: 30px">$250.00</strong>
+          <br>
+          <br>
+          El pago se deberá realizar en:
+          <ul>
+            <LI><a href="">Campus Hermosillo:</a>Biblioteca Central de la Universidad de Sonora, ubicada en Av. Sonora y Calle de Conocimiento.</LI>
+          </ul>
+          <strong>NOTA: Campus Hermosillo no acepta pagos en banco.</strong>
+
+        <h2>Pago Bancario para el examen:</h2>
+         <p>En la siguiente tabla se encuentran los precios del examen desglosados por carrera.</p>
+         <p>Favor de cumplir con el pago en tiempo y forma.</p>
+
+         <img src="images/demo/pagoexternos.jpg" align="center">
+
+         
+        
+      </div>
+         
+      
+    </div>
+    <!-- right column -->
+
+<!-- footer -->
+<div class="wrapper row3">
+      <footer id="footer" class="clear">
+
+    <script>
+      $(function() {
+    $( "#bExterno" ).click(function() {
+        $( "#externos" ).toggle();
+        document.getElementById('unison').style.display = 'none';
+    });
+    $( "#bUnison" ).click(function() {
+        $( "#unison" ).toggle();
+        document.getElementById('externos').style.display = 'none';
+    });
+});
+
+</script>
+
+
+  </footer>
+</div>
+</body>
+</html>
